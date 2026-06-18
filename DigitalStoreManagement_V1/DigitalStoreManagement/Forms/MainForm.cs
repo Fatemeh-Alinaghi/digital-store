@@ -32,14 +32,13 @@ namespace DigitalStoreManagement
             InitializeComponent();
 
 
+            cmbCategory.Items.Add("لپ تاپ");        
+            cmbCategory.Items.Add("تبلت");          
+            cmbCategory.Items.Add("موبایل");       
+            cmbCategory.Items.Add("هدفون");         
+            cmbCategory.Items.Add("ساعت هوشمند");   
+            cmbCategory.Items.Add("لوازم جانبی");  
 
-
-            
-            cmbCategory.Items.Add("موبایل");
-            cmbCategory.Items.Add("لپ تاپ");
-            cmbCategory.Items.Add("تبلت");
-            cmbCategory.Items.Add("هدفون");
-            cmbCategory.Items.Add("لوازم جانبی");
 
             LoadProducts();
 

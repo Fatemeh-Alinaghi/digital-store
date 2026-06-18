@@ -8,10 +8,11 @@ namespace DigitalStoreManagement.Enums
 {
     public enum CategoryType
     {
-        Mobile,
         Laptop,
         Tablet,
+        Mobile,
         Headphone,
+        SmartWatch,
         Accessory
     }
 }

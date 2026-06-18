@@ -243,7 +243,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(248, 35);
             this.txtSearch.TabIndex = 14;
-            this.txtSearch.Text = "جستجوی کالا...";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
