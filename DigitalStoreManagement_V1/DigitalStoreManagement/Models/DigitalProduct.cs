@@ -9,12 +9,12 @@ namespace DigitalStoreManagement.Models
 {
     public class DigitalProduct : BaseProduct
     {
-        
-        public CategoryType StorageType { get; set; }
+
+        public CategoryType Category { get; set; }
 
         public override string GetInfo()
         {
-            return $"{Name} - {StorageType} - تومان{Price}";
+            return $"{Name} - {Category} - {Price} تومان";
         }
     }
 }

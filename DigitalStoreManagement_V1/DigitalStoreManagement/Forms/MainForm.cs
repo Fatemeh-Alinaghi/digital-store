@@ -116,7 +116,15 @@ namespace DigitalStoreManagement
 
             DigitalProduct product = new DigitalProduct();
 
-            product.Id = lstProducts.Items.Count + 1;
+            if (products.Count == 0)
+            {
+                product.Id = 1;
+            }
+            else
+            {
+                product.Id = products.Max(p => p.Id) + 1;
+            }
+
             product.Name = txtProductName.Text;
 
             try
@@ -130,7 +138,7 @@ namespace DigitalStoreManagement
                 return;
             }
 
-            product.StorageType = (CategoryType)cmbCategory.SelectedIndex;
+            product.Category = (CategoryType)cmbCategory.SelectedIndex;
 
             products.Add(product);
             lstProducts.Items.Add(product.GetInfo());
@@ -141,7 +149,7 @@ namespace DigitalStoreManagement
             txtPrice.Clear();
             cmbCategory.SelectedIndex = -1;
 
-            txtProductName.Focus();
+            
             
         }
 
@@ -160,22 +168,28 @@ namespace DigitalStoreManagement
         {
             string searchName = txtSearch.Text;
 
+            string result = "";
+
             foreach (DigitalProduct product in products)
             {
                 if (product.Name.ToLower().Contains(searchName.ToLower()))
                 {
-                    MessageBox.Show(
-                        $"کالا پیدا شد\nنام: {product.Name}\nقیمت: {product.Price}"
-                    );
-
-                    return;
+                    result +=
+                        $"نام: {product.Name} - قیمت: {product.Price}\n";
                 }
             }
 
-            MessageBox.Show("کالا پیدا نشد");
+            if (result != "")
+            {
+                MessageBox.Show(result);
+            }
+            else
+            {
+                MessageBox.Show("کالا پیدا نشد");
+            }
         }
 
-        
+
 
         private void lblSearch_Click(object sender, EventArgs e)
         {
@@ -200,6 +214,11 @@ namespace DigitalStoreManagement
             lstProducts.Items.RemoveAt(index);
 
             MessageBox.Show("کالا حذف شد");
+
+
+            txtProductName.Clear();
+            txtPrice.Clear();
+            cmbCategory.SelectedIndex = -1;
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)
@@ -231,6 +250,12 @@ namespace DigitalStoreManagement
             lstProducts.Items[index] = product.GetInfo();
 
             MessageBox.Show("کالا ویرایش شد");
+
+
+
+            txtProductName.Clear();
+            txtPrice.Clear();
+            cmbCategory.SelectedIndex = -1;
         }
 
         private void lstProducts_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,6 +283,12 @@ namespace DigitalStoreManagement
             writer.Close();
 
             MessageBox.Show("اطلاعات ذخیره شد");
+
+
+
+            txtProductName.Clear();
+            txtPrice.Clear();
+            cmbCategory.SelectedIndex = -1;
         }
 
         private void grpProductInfo_Enter(object sender, EventArgs e)
