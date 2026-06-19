@@ -19,6 +19,7 @@ namespace DigitalStoreWarehouse.Forms
         private Label lblName;
         private Label lblPrice;
         private Label lblStock;
+        private Label label1;
         private Label lblCategory;
 
         public WarehouseForm()
@@ -41,6 +42,7 @@ namespace DigitalStoreWarehouse.Forms
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtName
@@ -66,7 +68,8 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // btnShow
             // 
-            this.btnShow.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnShow.BackColor = System.Drawing.Color.Navy;
+            this.btnShow.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.ForeColor = System.Drawing.Color.White;
             this.btnShow.Location = new System.Drawing.Point(567, 419);
             this.btnShow.Name = "btnShow";
@@ -87,6 +90,7 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // chkLowStock
             // 
+            this.chkLowStock.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.chkLowStock.Location = new System.Drawing.Point(547, 367);
             this.chkLowStock.Name = "chkLowStock";
             this.chkLowStock.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -112,6 +116,7 @@ namespace DigitalStoreWarehouse.Forms
             // rbNew
             // 
             this.rbNew.Checked = true;
+            this.rbNew.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.rbNew.Location = new System.Drawing.Point(547, 325);
             this.rbNew.Name = "rbNew";
             this.rbNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -122,6 +127,7 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // rbUsed
             // 
+            this.rbUsed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.rbUsed.Location = new System.Drawing.Point(628, 325);
             this.rbUsed.Name = "rbUsed";
             this.rbUsed.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -131,6 +137,7 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // lblName
             // 
+            this.lblName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblName.Location = new System.Drawing.Point(567, 18);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -140,6 +147,7 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // lblPrice
             // 
+            this.lblPrice.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblPrice.Location = new System.Drawing.Point(652, 173);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -149,6 +157,7 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // lblStock
             // 
+            this.lblStock.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblStock.Location = new System.Drawing.Point(619, 95);
             this.lblStock.Name = "lblStock";
             this.lblStock.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -158,6 +167,7 @@ namespace DigitalStoreWarehouse.Forms
             // 
             // lblCategory
             // 
+            this.lblCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblCategory.Location = new System.Drawing.Point(655, 248);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -165,9 +175,21 @@ namespace DigitalStoreWarehouse.Forms
             this.lblCategory.TabIndex = 7;
             this.lblCategory.Text = "دسته:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(290, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "مدیریت انبار فروشگاه";
+            // 
             // WarehouseForm
             // 
             this.ClientSize = new System.Drawing.Size(782, 601);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblPrice);
